@@ -1,0 +1,194 @@
+/* OMAR TAWFIK ABD ELFATTAH TAWFIK 20250665 */
+/* Unified Color Theme Implementation */
+
+:root {
+    --bg-color: #f8f9fa;
+    --primary-color: #2b2d42;
+    --secondary-color: #8d99ae;
+    --accent-color: #ef233c;
+    --text-color: #333333;
+    --white: #ffffff;
+}
+
+/* Clean Indentation & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Semantic Layout: Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Semantic Layout: Navigation */
+nav {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transitions required */
+}
+
+/* Hover Effects */
+nav a:hover, nav a.active {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Semantic Layout: Main */
+main {
+    flex: 1; /* Pushes footer to the bottom */
+    padding: 40px 20px;
+}
+
+/* General Card Design for Sections */
+.card {
+    background-color: var(--white);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.submit-btn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d90429;
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto; /* Required for responsive tables */
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Table Hover Effect */
+tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Semantic Layout: Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Responsive Layout Implementation */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        width: 90%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
+/* OMAR TAWFIK ABD ELFATTAH TAWFIK 20250665 */
